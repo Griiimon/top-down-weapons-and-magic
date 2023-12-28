@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://ddtubbroxduxj"]
+
+[ext_resource type="PackedScene" uid="uid://bpdos6b0u8pxp" path="res://player.tscn" id="1_3h3ap"]
+[ext_resource type="Resource" uid="uid://blrcx8j1mkpy7" path="res://weapons/knife.tres" id="2_ejuhh"]
+[ext_resource type="Resource" uid="uid://0l8lvtm888gu" path="res://weapons/sword.tres" id="3_yx6g1"]
+[ext_resource type="Resource" uid="uid://b46ltyqkx8e7b" path="res://weapons/ice_spell.tres" id="4_gahha"]
+[ext_resource type="Resource" uid="uid://8emawyg63pj8" path="res://weapons/bow.tres" id="5_pka0s"]
+[ext_resource type="Script" path="res://UI.gd" id="6_aswl0"]
+
+[node name="Level" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_3h3ap")]
+position = Vector2(176, 272)
+rotation = 1.5708
+weapons = Array[Resource("res://weapon scripts/Base Weapon.gd")]([ExtResource("2_ejuhh"), ExtResource("3_yx6g1"), ExtResource("4_gahha"), ExtResource("5_pka0s")])
+
+[node name="UI" type="CanvasLayer" parent="."]
+script = ExtResource("6_aswl0")
+
+[node name="MarginContainer" type="MarginContainer" parent="UI"]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MarginContainer"]
+layout_mode = 2
+
+[node name="Keybinds" type="Label" parent="UI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "S - Attack
+A - Next Weapon"
+
+[node name="HSeparator" type="HSeparator" parent="UI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label Weapon" type="Label" parent="UI/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "No Weapon"
+horizontal_alignment = 1
+
+[connection signal="weapon_switched" from="Player" to="UI" method="set_weapon_name"]

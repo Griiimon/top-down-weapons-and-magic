@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SpellWeapon" load_steps=4 format=3 uid="uid://b46ltyqkx8e7b"]
+
+[ext_resource type="Script" path="res://weapon scripts/Spell Weapon.gd" id="1_mb1l0"]
+[ext_resource type="PackedScene" uid="uid://dllks4dhpfe5u" path="res://weapon scenes/ice_spell.tscn" id="1_o7wtq"]
+[ext_resource type="PackedScene" uid="uid://c58iy5la5h0sc" path="res://projectiles/ice_projectile.tscn" id="2_5s0td"]
+
+[resource]
+script = ExtResource("1_mb1l0")
+projectile_scene = ExtResource("2_5s0td")
+projectile_speed = 1.0
+projectile_start_position = 1
+name = "Ice Spell"
+hand_scene = ExtResource("1_o7wtq")
+attack_animation = "spell"
+attack_delay = 0.5
+attack_interval = 0.3

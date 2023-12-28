@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MeleeWeapon" load_steps=3 format=3 uid="uid://blrcx8j1mkpy7"]
+
+[ext_resource type="Script" path="res://weapon scripts/Melee Weapon.gd" id="1_d3dc1"]
+[ext_resource type="PackedScene" uid="uid://dr66f4q4itx05" path="res://weapon scenes/knife.tscn" id="1_em7jl"]
+
+[resource]
+script = ExtResource("1_d3dc1")
+attack_speed = 1.0
+name = "Knife"
+hand_scene = ExtResource("1_em7jl")
+attack_animation = "melee_stab"
+attack_delay = 0.0
+attack_interval = 0.0

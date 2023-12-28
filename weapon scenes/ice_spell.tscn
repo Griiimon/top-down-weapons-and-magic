@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://dllks4dhpfe5u"]
+
+[sub_resource type="Gradient" id="Gradient_yx6x4"]
+colors = PackedColorArray(0, 0, 1, 0, 0.243137, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_wu5ys"]
+gradient = SubResource("Gradient_yx6x4")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_r71s0"]
+particle_flag_disable_z = true
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 10.0
+emission_ring_radius = 10.0
+emission_ring_inner_radius = 0.0
+gravity = Vector3(0, 0, 0)
+radial_accel_min = -54.25
+radial_accel_max = -54.25
+tangential_accel_min = 30.3
+tangential_accel_max = 42.42
+scale_min = 3.0
+scale_max = 3.0
+color_ramp = SubResource("GradientTexture1D_wu5ys")
+turbulence_enabled = true
+
+[node name="Ice Spell" type="Node2D"]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+amount = 80
+process_material = SubResource("ParticleProcessMaterial_r71s0")
+lifetime = 0.45
+preprocess = 2.0
+randomness = 0.41

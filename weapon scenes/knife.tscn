@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dr66f4q4itx05"]
+
+[node name="Knife" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(0, -6)
+color = Color(0.572549, 0.572549, 0.572549, 1)
+polygon = PackedVector2Array(-4, -1, -4, -18, -3, -29, 5, -20, 4, -1)
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+position = Vector2(0, -8)
+color = Color(0.603922, 0.341176, 0, 1)
+polygon = PackedVector2Array(-4, 0, 4, 0, 4, 12, -4, 12)

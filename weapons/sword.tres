@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MeleeWeapon" load_steps=3 format=3 uid="uid://0l8lvtm888gu"]
+
+[ext_resource type="PackedScene" uid="uid://cobvv4l4txfl4" path="res://weapon scenes/sword.tscn" id="1_43vh8"]
+[ext_resource type="Script" path="res://weapon scripts/Melee Weapon.gd" id="1_e0721"]
+
+[resource]
+script = ExtResource("1_e0721")
+attack_speed = 0.5
+name = "Sword"
+hand_scene = ExtResource("1_43vh8")
+attack_animation = "melee_swing"
+attack_delay = 0.0
+attack_interval = 0.0
