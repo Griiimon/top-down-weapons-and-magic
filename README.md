@@ -3,7 +3,7 @@ Code Demo for top down weapons and spells as resources featuring animations
 
 # Code
 
-Check res://weapons for the Weapons. They are Resources, that include the Scene that is to be instantiated in the Players hand among other things.
+Check `res://weapon` for the Weapons. They are Resources, that include the Scene that is to be instantiated in the Players hand among other things.
 
 # Notes
 
